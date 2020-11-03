@@ -28,8 +28,12 @@ for word in wordlist:
 		dic[word]+=1
 	else:
 		dic[word]=1
-print(dic)
 
+dic
+
+result = sorted(dic.items() , key = lambda x: x[1])
+
+print(result)
 
 
 
