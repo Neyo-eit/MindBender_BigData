@@ -10,7 +10,7 @@ var=$(jps)
 var1="NameNode"
 var2="ResourceManager"
 
-if [[ $var1 == $var ]] && [[ $var2 = $var ]] ;  ### Check if NameNode is in the output of jps
+if [[ ($var1 == $var) && ($var2 = $var) ]] ;  ### Check if NameNode is in the output of jps
   
 then 
    echo "Hadoop is on"   ### True,  means Hadoop is running 
