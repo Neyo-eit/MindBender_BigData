@@ -19,7 +19,7 @@ wget http://archive.apache.org/dist/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.
 
 # Unzip the downloaded file:
 
-tar zxf hadoop2.7.3.tar.gz
+tar -xvzf hadoop2.7.3.tar.gz
 
 # Remove the .tar.gz file
 
@@ -27,7 +27,7 @@ rm -r hadoop-2.7.3.tar.gz
 
 #Change to the unziped hadoop folder:
 
-cd hadoop-2.7.3/
+cd hadoop-2.7.3
 
 # Edit the .bash_profile file by setting env for HADOOP:
 
@@ -50,7 +50,7 @@ cd opt/hadoop-2.7.3/etc/hadoop
 ## Search for export JAVA_HOME if seen return the value abd store it at search
 ## If not seen return blank
 
-search = $( grep -s export JAVA_HOME* hadoop-env.sh)
+search = $(grep -s export JAVA_HOME* hadoop-env.sh)
 
 replace = "export JAVA_HOME=/home/opt/jdk1.8.0_221"
 filename="hadoop-env.sh"
